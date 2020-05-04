@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  padding: 20px 40px;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__logo {
+  font-size: 36px;
+  z-index: 5;
+}
+
+.header__list {
+  z-index: 3;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__list li {
+  padding: 0 20px;
+}
+
+.header #toggle {
+  max-width: 40px;
+  display: none;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.nosotros {
+  background: #2d3436;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 130px 50px 40px;
+}
+
+.nosotros__intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+.nosotros__intro p {
+  text-align: center;
+}
+
+.nosotros__intro__titulo {
+  font-size: 40px;
+  font-weight: 500;
+  color: #fdcb6e;
+}
+
+.nosotros__intro__titulo span {
+  font-weight: 700;
+  color: #fd79a8;
+}
+
+.nosotros__intro__texto {
+  padding: 40px 0 0;
+  color: #fff;
+}
+
+.nosotros__info img {
+  max-width: 100%;
+}
+
+.proyectos {
+  padding: 80px 70px;
+}
+
+.proyectos__main {
+  height: 500px;
+  width: 100%;
+}
+
+.proyectos__main div {
+  background: url("images/main.jpg") no-repeat center center/100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.proyectos__main div:hover {
+  background-size: 110%;
+}
+
+.proyectos__plus {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.proyectos__plus div {
+  height: 400px;
+  max-width: 100%;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.proyectos__plus div:hover {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+}
+
+.proyectos__plus .p1 {
+  background: url("images/cell.jpg") no-repeat center center/cover;
+}
+
+.proyectos__plus .p2 {
+  background: url("images/code.jpg") no-repeat center center/cover;
+}
+
+.proyectos__plus .p3 {
+  background: url("images/laptop.jpg") no-repeat center center/cover;
+}
+
+.proyectos__plus .p4 {
+  background: url("images/table.jpg") no-repeat center center/cover;
+}
+
+@media screen and (max-width: 992px) {
+  .nosotros {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .proyectos__main div {
+    background-position: left center;
+  }
+  .proyectos__plus {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .header__list {
+    position: absolute;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__list li {
+    padding: 80px 0;
+  }
+  .header__list.active {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .header #toggle {
+    display: block;
+  }
+  .nosotros {
+    padding: 150px 10px 20px;
+  }
+  .nosotros__texto {
+    padding: 10px;
+  }
+  .proyectos {
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
